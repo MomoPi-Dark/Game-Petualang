@@ -1,0 +1,8 @@
+kivy_*
+__pycache__
+.buildozer
+venv
+bin
+.venv
+*.json
+.idea
