@@ -90,7 +90,6 @@ class BudayaSeruScreen(LayoutScreen):
             questions_data=questions_data,
             home_destination="lagu_budaya",
             bar_timeout_src="assets/img/quest/bar_timeout/budaya.png",
-            bg_lyric_src="assets/img/quest/bg_description/budaya.png",
             timeout_duration=40.0,
             group_key_store="budaya",
             key_store="seru",

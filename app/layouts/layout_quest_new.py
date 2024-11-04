@@ -395,7 +395,6 @@ class LayoutScreen(WithDefaultBG):
         questions_data: list[dict],
         home_destination: str,
         bar_timeout_src: str,
-        bg_lyric_src: str,
         timeout_duration=10.0,
         **kw,
     ):
@@ -406,7 +405,6 @@ class LayoutScreen(WithDefaultBG):
         self._questions_data = questions_data
         self._home_destination = home_destination
         self._bar_timeout_src = bar_timeout_src
-        self._bg_lyric_src = bg_lyric_src
         self._timeout_duration = timeout_duration
         self._group_key_store = group_key_store
         self._key_store = key_store

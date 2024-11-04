@@ -78,7 +78,6 @@ class KebangsaanSeruScreen(LayoutScreen):
             questions_data=questions_data,
             home_destination="lagu_kebangsaan",
             bar_timeout_src="assets/img/quest/bar_timeout/kebangsaan.png",
-            bg_lyric_src="assets/img/quest/bg_description/kebangsaan.png",
             timeout_duration=40.0,
             group_key_store="kebangsaan",
             key_store="seru",

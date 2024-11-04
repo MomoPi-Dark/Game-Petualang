@@ -23,7 +23,7 @@ Logger.setLevel("DEBUG")
 # NOTE: DEV SCREEN
 # Window.size = CalculateWindow(Window.width, (9, 20)).get_size()
 # Window.size = CalculateWindow(380, (9, 20)).get_size()
-# Window.size = CalculateWindow(480, (9, 16)).get_size()
+Window.size = CalculateWindow(480, (9, 20)).get_size()
 
 # NOTE: PROD SCREEN
 # Window.size = CalculateWindow(
@@ -57,25 +57,25 @@ class NadaCilikApp(MDApp):
 
     def _init_screen(self):
         # NOTE: Home Menu
-        self.screen_manager.add_widget(MainMenu(name="main_menu", app=self))
-        self.screen_manager.add_widget(ChooseGameScreen(name="choose_game", app=self))
+        # self.screen_manager.add_widget(MainMenu(name="main_menu", app=self))
+        # self.screen_manager.add_widget(ChooseGameScreen(name="choose_game", app=self))
 
         # NOTE: Game Menu
-        self.screen_manager.add_widget(BudayaScreen(name="lagu_budaya", app=self))
-        self.screen_manager.add_widget(
-            KebangsaanScreen(name="lagu_kebangsaan", app=self)
-        )
+        # self.screen_manager.add_widget(BudayaScreen(name="lagu_budaya", app=self))
+        # self.screen_manager.add_widget(
+        #     KebangsaanScreen(name="lagu_kebangsaan", app=self)
+        # )
 
         # NOTE: Game Play.
-        self.screen_manager.add_widget(BudayaCeriaScreen(name="budaya_ceria", app=self))
-        self.screen_manager.add_widget(BudayaSeruScreen(name="budaya_seru", app=self))
+        # self.screen_manager.add_widget(BudayaCeriaScreen(name="budaya_ceria", app=self))
+        # self.screen_manager.add_widget(BudayaSeruScreen(name="budaya_seru", app=self))
 
         self.screen_manager.add_widget(
             KebangsaanCeriaScreen(name="kebangsaan_ceria", app=self)
         )
-        self.screen_manager.add_widget(
-            KebangsaanSeruScreen(name="kebangsaan_seru", app=self)
-        )
+        # self.screen_manager.add_widget(
+        #     KebangsaanSeruScreen(name="kebangsaan_seru", app=self)
+        # )
 
     def build(self):
         return self.screen_manager
