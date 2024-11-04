@@ -16,7 +16,7 @@ source.dir = .
 source.include_exts = py,png,jpg,kv,atlas,mp3,wav,ttf,jpeg
 
 # (list) List of inclusions using pattern matching
-source.include_patterns = assets/**
+source.include_patterns = assets/**, app/**
 
 # (list) Source files to exclude (let empty to not exclude anything)
 #source.exclude_exts = spec
@@ -39,7 +39,8 @@ version = 1.0
 # comma separated e.g. requirements = sqlite3,kivy
 requirements = python3,
     kivy,
-    https://github.com/kivymd/KivyMD/archive/master.zip,materialyoucolor,
+    https://github.com/kivymd/KivyMD/archive/master.zip,
+    materialyoucolor,
     exceptiongroup,
     asyncgui,
     asynckivy
