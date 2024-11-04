@@ -3,10 +3,7 @@ from app.layouts.layout_quest_new import LayoutScreen
 questions_data = [
     {
         "font_content_size": 20,
-        "descriptions": [
-            "Lagu Ampar-Ampar Pisang",
-            "berasal dari daerah mana?",
-        ],
+        "question": "",
         "answer": "b",
         "decorations": [],
         "btn_a_src": "assets/img/quest/ceria/budaya/q1/a.png",  # Jakarta
@@ -15,11 +12,7 @@ questions_data = [
     },
     {
         "font_content_size": 20,
-        "descriptions": [
-            "Lagu Anak Kambing Saya",
-            "Apa yang dicari dalam",
-            " lagu Anak Kambing Saya?",
-        ],
+        "question": "",
         "answer": "b",
         "decorations": [],
         "btn_a_src": "assets/img/quest/ceria/budaya/q2/a.png",  # Anak sapi
@@ -28,10 +21,7 @@ questions_data = [
     },
     {
         "font_content_size": 18,
-        "descriptions": [
-            "Lagu Cublak-Cublak Suweng",
-            "siapa yang bersembunyi?",
-        ],
+        "question": "",
         "answer": "c",
         "decorations": [],
         "btn_a_src": "assets/img/quest/ceria/budaya/q3/a.png",  # Ayam
@@ -40,11 +30,7 @@ questions_data = [
     },
     {
         "font_content_size": 20,
-        "descriptions": [
-            "Lagu Gundul-Gundul Pacul",
-            "biasanya dinyanyikan",
-            " sambil bermain apa?",
-        ],
+        "question": "",
         "answer": "c",
         "decorations": [],
         "btn_a_src": "assets/img/quest/ceria/budaya/q4/a.png",  # Petak umpet
@@ -53,10 +39,7 @@ questions_data = [
     },
     {
         "font_content_size": 24,
-        "descriptions": [
-            "Lagu Jali-Jali",
-            "terkenal dari mana?",
-        ],
+        "question": "",
         "answer": "b",
         "decorations": [],
         "btn_a_src": "assets/img/quest/ceria/budaya/q5/a.png",  # Sumatera
@@ -74,7 +57,6 @@ class BudayaCeriaScreen(LayoutScreen):
             questions_data=questions_data,
             home_destination="lagu_budaya",
             bar_timeout_src="assets/img/quest/bar_timeout/budaya.png",
-            bg_lyric_src="assets/img/quest/bg_description/budaya.png",
             timeout_duration=10.0,
             group_key_store="daerah",
             key_store="ceria",

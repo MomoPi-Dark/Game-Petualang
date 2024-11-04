@@ -1,20 +1,12 @@
 from kivy.clock import Clock
 from kivy.core.audio import SoundLoader
-from kivy.core.window import Window
-from kivy.properties import ObjectProperty
-from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.floatlayout import FloatLayout
-from kivy.uix.gridlayout import GridLayout
 from kivy.uix.image import Image
 from kivy.uix.label import Label
-from kivy.uix.scrollview import ScrollView
-from kivymd.uix.screen import MDScreen
 
 from app.customs.image import CustomImage
 from app.customs.uix import CustomButton, OutlinedLabel
 from app.layouts.default_bg import WithDefaultBG
-from app.utils.calculate_window import CalculateWindow
-from app.utils.color_font import ColorFont
 
 
 class LayoutQuest(FloatLayout):
@@ -25,8 +17,7 @@ class LayoutQuest(FloatLayout):
         background_image: str,
         home_screen: str,
         timeout_bar_image: str,
-        lyrics_bg_image: str,
-        descriptions: list[str],
+        question: str,
         correct_answer: str,
         option_a_image: str,
         option_b_image: str,
@@ -43,8 +34,7 @@ class LayoutQuest(FloatLayout):
         self.home_screen = home_screen
         self.incorrect_color = incorrect_color
         self.background_image = background_image
-        self.lyrics_bg_image = lyrics_bg_image
-        self.descriptions = descriptions
+        self.question = question
         self.timeout_bar_image = timeout_bar_image
         self.content_font_size = content_font_size
         self.decorations = decorations
@@ -116,47 +106,47 @@ class LayoutQuest(FloatLayout):
         """Create and configure the lyrics layout."""
 
         lyrics_bg = CustomImage(
-            source=self.lyrics_bg_image,
+            source=self.question,
             pos_hint={"center_x": 0.5, "center_y": 0.65},
         )
         self.add_widget(lyrics_bg)
 
-        scrollview = ScrollView(
-            size_hint=(None, None),
-            do_scroll_x=False,
-            bar_width=10,
-            bar_inactive_color=(0.16, 0.16, 0.16, 1),
-            pos_hint={"center_x": 0.5, "center_y": 0.27},
-        )
+        # scrollview = ScrollView(
+        #     size_hint=(None, None),
+        #     do_scroll_x=False,
+        #     bar_width=10,
+        #     bar_inactive_color=(0.16, 0.16, 0.16, 1),
+        #     pos_hint={"center_x": 0.5, "center_y": 0.27},
+        # )
 
-        lyrics_bg.bind(
-            size=lambda instance, value: setattr(
-                scrollview, "size", (instance.size[0], instance.size[1])
-            )
-        )
+        # lyrics_bg.bind(
+        #     size=lambda instance, value: setattr(
+        #         scrollview, "size", (instance.size[0], instance.size[1])
+        #     )
+        # )
 
-        content_layout = GridLayout(
-            cols=1, padding=[0, 10, 0, 10], spacing=10, size_hint_y=None
-        )
-        content_layout.bind(minimum_height=content_layout.setter("height"))
+        # content_layout = GridLayout(
+        #     cols=1, padding=[0, 10, 0, 10], spacing=10, size_hint_y=None
+        # )
+        # content_layout.bind(minimum_height=content_layout.setter("height"))
 
-        for desc in self.descriptions:
-            label = Label(
-                text=desc,
-                size_hint_y=None,
-                height=20,
-                font_size=self.content_font_size,
-                color=(0.16, 0.16, 0.16, 1),
-                font_name="boorsok",
-                text_size=(None, None),
-                halign="center",
-                valign="middle",
-            )
-            label.bind(size=label.setter("text_size"))
-            content_layout.add_widget(label)
+        # for desc in self.question:
+        #     label = Label(
+        #         text=desc,
+        #         size_hint_y=None,
+        #         height=20,
+        #         font_size=self.content_font_size,
+        #         color=(0.16, 0.16, 0.16, 1),
+        #         font_name="boorsok",
+        #         text_size=(None, None),
+        #         halign="center",
+        #         valign="middle",
+        #     )
+        #     label.bind(size=label.setter("text_size"))
+        #     content_layout.add_widget(label)
 
-        scrollview.add_widget(content_layout)
-        self.add_widget(scrollview)
+        # scrollview.add_widget(content_layout)
+        # self.add_widget(scrollview)
 
         for deco in self.decorations:
             if deco.parent:
@@ -470,11 +460,10 @@ class LayoutScreen(WithDefaultBG):
             incorrect_color=self._color_wrong,
             home_screen=self._home_destination,
             timeout_bar_image=self._bar_timeout_src,
-            lyrics_bg_image=self._bg_lyric_src,
             background_music=question_data.get("bg_sound", ""),
             content_font_size=question_data.get("font_content_size", "20sp"),
             timeout_duration=self._timeout_duration,
-            descriptions=question_data.get("descriptions", []),
+            question=question_data.get("question", None),
             correct_answer=question_data.get("answer", ""),
             decorations=question_data.get("decorations", []),
             option_a_image=question_data.get("btn_a_src", ""),

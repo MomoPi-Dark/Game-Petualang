@@ -5,7 +5,7 @@ questions_data = [
         "font_content_size": 15,
         "bg_sound": "assets/music/budaya/question/ampar_ampar_pisang.mp3",
         "decorations": [],
-        "descriptions": [
+        "question": [
             "Pisangku belum masak",
             "Masak sedikit, dihurung bari-bari",
             "Masak sedikit, dihurung bari-bari",
@@ -23,7 +23,7 @@ questions_data = [
         "font_content_size": "16sp",
         "bg_sound": "assets/music/budaya/question/yamko_rambe_yamko.mp3",
         "decorations": [],
-        "descriptions": [
+        "question": [
             "Hee yamko rambe yamko aronawa kombe",
             "Hee yamko rambe yamko aronawa kombe",
             "Hongke hongke hongke riro",
@@ -40,7 +40,7 @@ questions_data = [
         "font_content_size": "16sp",
         "bg_sound": "assets/music/budaya/question/rasa_sayange.mp3",
         "decorations": [],
-        "descriptions": [
+        "question": [
             "Rasa sayange.. rasa sayang sayange..",
             "Lihat nona dari jauh rasa sayang sayange",
             "Rasa sayange.. rasa sayang sayange..",
@@ -55,7 +55,7 @@ questions_data = [
         "font_content_size": "24sp",
         "bg_sound": "assets/music/budaya/question/gundul_pacul.mp3",
         "decorations": [],
-        "descriptions": [
+        "question": [
             "Gundul gundul pacul,",
             "cul gembelengan...",
             "Nyunggi nyunggi wakul...",
@@ -69,7 +69,7 @@ questions_data = [
         "font_content_size": "24sp",
         "bg_sound": "assets/music/budaya/question/cublak_cublak_suweng.mp3",
         "decorations": [],
-        "descriptions": [
+        "question": [
             "Cublak-cublak suweng,",
             "suwenge teng gelenter",
             "Mambu ketundhung gudel...",

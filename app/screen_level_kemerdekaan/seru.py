@@ -4,7 +4,7 @@ questions_data = [
     {
         "font_content_size": "18sp",
         "bg_sound": "assets/music/kebangsaan/question/dari_sabang_sampai_merauke.mp3",
-        "descriptions": [
+        "question": [
             "Sambung-menyambung menjadi satu",
             "Itulah Indonesia",
             "Indonesia tanah airku",
@@ -19,7 +19,7 @@ questions_data = [
     {
         "font_content_size": "18sp",
         "bg_sound": "assets/music/kebangsaan/question/halo_halo_bandung.mp3",
-        "descriptions": [
+        "question": [
             "Sudah lama beta",
             "Tidak Berjumpa dengan kau",
             "Sekarang sudah menjadi lautan api",
@@ -34,7 +34,7 @@ questions_data = [
     {
         "font_content_size": "20sp",
         "bg_sound": "assets/music/kebangsaan/question/satu_nusa_satu_bangsa.mp3",
-        "descriptions": ["Tanah Air", "Pasti Jaya Untuk Slama-lamanya"],
+        "question": ["Tanah Air", "Pasti Jaya Untuk Slama-lamanya"],
         "decoration": [],
         "answer": "c",
         "btn_a_src": "assets/img/quest/seru/kebangsaan/q3/a.png",
@@ -44,7 +44,7 @@ questions_data = [
     {
         "font_content_size": "18sp",
         "bg_sound": "assets/music/kebangsaan/question/17_agustus.mp3",
-        "descriptions": [
+        "question": [
             "Tujuh belas Agustus tahun empat lima",
             "Itulah hari kemerdekaan kita",
             "Hari merdeka nusa dan bangsa...",
@@ -58,7 +58,7 @@ questions_data = [
     {
         "font_content_size": "23sp",
         "bg_sound": "assets/music/kebangsaan/question/bagimu_negeri.mp3",
-        "descriptions": [
+        "question": [
             "Padamu negeri kami berjanji",
         ],
         "decoration": [],

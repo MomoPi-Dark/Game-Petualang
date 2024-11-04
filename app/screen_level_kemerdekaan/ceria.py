@@ -2,7 +2,7 @@ from app.layouts.layout_quest_new import LayoutScreen
 
 questions_data = [
     {
-        "descriptions": ["Siapa pencipta lagu", '"Hari Merdeka 17 Agustus"?'],
+        "question": "",
         "answer": "a",
         "decorations": [],
         "btn_a_src": "assets/img/quest/ceria/kebangsaan/q1/a.png",
@@ -10,7 +10,7 @@ questions_data = [
         "btn_c_src": "assets/img/quest/ceria/kebangsaan/q1/c.png",
     },
     {
-        "descriptions": ["Dari daerah mana lagu", '"Halo Halo Bandung" berasal?'],
+        "question": "",
         "answer": "b",
         "decorations": [],
         "btn_a_src": "assets/img/quest/ceria/kebangsaan/q2/a.png",
@@ -18,11 +18,7 @@ questions_data = [
         "btn_c_src": "assets/img/quest/ceria/kebangsaan/q2/c.png",
     },
     {
-        "descriptions": [
-            "Apa judul lagu yang mengajak kita",
-            "mencintai bendera Indonesia?",
-            '(petunjuk: "berkibarlah...")',
-        ],
+        "question": "",
         "answer": "c",
         "decorations": [],
         "btn_a_src": "assets/img/quest/ceria/kebangsaan/q3/a.png",
@@ -30,10 +26,7 @@ questions_data = [
         "btn_c_src": "assets/img/quest/ceria/kebangsaan/q3/c.png",
     },
     {
-        "descriptions": [
-            "Lagu apa yang dinyanyikan pada",
-            "perayaan kemerdekaan Indonesia?",
-        ],
+        "question": "",
         "answer": "a",
         "decorations": [],
         "btn_a_src": "assets/img/quest/ceria/kebangsaan/q4/a.png",
@@ -41,9 +34,7 @@ questions_data = [
         "btn_c_src": "assets/img/quest/ceria/kebangsaan/q4/c.png",
     },
     {
-        "descriptions": [
-            "Apa warna bendera Indonesia?",
-        ],
+        "question": "",
         "answer": "b",
         "decorations": [],
         "btn_a_src": "assets/img/quest/ceria/kebangsaan/q5/a.png",
