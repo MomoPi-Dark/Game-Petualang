@@ -41,7 +41,7 @@ class CustomButton(ButtonBehavior, ImageWithBorder):
         app,
         destination="",
         click_sound_path="assets/sounds/sound_effect/click.mp3",
-        show_border=False,
+        show_border=True,
         clicked_scale_max=0.02,
         **kwargs,
     ):

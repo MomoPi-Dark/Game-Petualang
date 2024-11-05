@@ -6,6 +6,7 @@ from kivy.logger import Logger
 from kivy.uix.screenmanager import FadeTransition, ScreenManager
 from kivymd.app import MDApp
 
+from app.db.json_store_config_manager import ConfigManager
 from app.db.json_store_score_manager import ScoreManager
 from app.screen.main_menu import MainMenu
 from app.screen.select_level_menu import ChooseGameScreen
@@ -27,7 +28,7 @@ Window.size = CalculateWindow(480, (9, 20)).get_size()
 
 # NOTE: PROD SCREEN
 # Window.size = CalculateWindow(
-#     window_width=Window.width, aspect_ratio=(Window.width / Window.height)
+#     window_width=Window.width,
 # ).get_size()
 
 # NOTE: INIT FONTS
@@ -42,13 +43,17 @@ class NadaCilikApp(MDApp):
         super().__init__(**kwargs)
 
         self.title = "Nada Cilik"
+
+        self.configs_manager = ConfigManager()
         self.score_manager = ScoreManager()
         self.backsound = None
 
-        self.screen_manager = ScreenManager(transition=FadeTransition())
+        self.screen_manager = ScreenManager(transition=FadeTransition(duration=0.5))
         self._init_screen()
 
-        self.backsound = SoundLoader.load("assets/sounds/sound_effect/backsound.mp3")
+        self.backsound: Sound = SoundLoader.load(
+            "assets/sounds/sound_effect/backsound.mp3"
+        )
 
         self._fade_interval = 0.1
         self._fade_out_step = 0.05
@@ -57,25 +62,25 @@ class NadaCilikApp(MDApp):
 
     def _init_screen(self):
         # NOTE: Home Menu
-        # self.screen_manager.add_widget(MainMenu(name="main_menu", app=self))
-        # self.screen_manager.add_widget(ChooseGameScreen(name="choose_game", app=self))
+        self.screen_manager.add_widget(MainMenu(name="main_menu", app=self))
+        self.screen_manager.add_widget(ChooseGameScreen(name="choose_game", app=self))
 
         # NOTE: Game Menu
-        # self.screen_manager.add_widget(BudayaScreen(name="lagu_budaya", app=self))
-        # self.screen_manager.add_widget(
-        #     KebangsaanScreen(name="lagu_kebangsaan", app=self)
-        # )
+        self.screen_manager.add_widget(BudayaScreen(name="lagu_budaya", app=self))
+        self.screen_manager.add_widget(
+            KebangsaanScreen(name="lagu_kebangsaan", app=self)
+        )
 
         # NOTE: Game Play.
-        # self.screen_manager.add_widget(BudayaCeriaScreen(name="budaya_ceria", app=self))
-        # self.screen_manager.add_widget(BudayaSeruScreen(name="budaya_seru", app=self))
+        self.screen_manager.add_widget(BudayaCeriaScreen(name="budaya_ceria", app=self))
+        self.screen_manager.add_widget(BudayaSeruScreen(name="budaya_seru", app=self))
 
         self.screen_manager.add_widget(
             KebangsaanCeriaScreen(name="kebangsaan_ceria", app=self)
         )
-        # self.screen_manager.add_widget(
-        #     KebangsaanSeruScreen(name="kebangsaan_seru", app=self)
-        # )
+        self.screen_manager.add_widget(
+            KebangsaanSeruScreen(name="kebangsaan_seru", app=self)
+        )
 
     def build(self):
         return self.screen_manager

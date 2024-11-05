@@ -2,49 +2,44 @@ from app.layouts.layout_quest_new import LayoutScreen
 
 questions_data = [
     {
-        "font_content_size": 20,
-        "question": "",
+        "question": "assets/img/quest/_ceria/budaya/q1/quest.png",
         "answer": "b",
         "decorations": [],
-        "btn_a_src": "assets/img/quest/ceria/budaya/q1/a.png",  # Jakarta
-        "btn_b_src": "assets/img/quest/ceria/budaya/q1/b.png",  # Kalimantan Selatan
-        "btn_c_src": "assets/img/quest/ceria/budaya/q1/c.png",  # Jawa Barat
+        "btn_a_src": "assets/img/quest/_ceria/budaya/q1/a.png",
+        "btn_b_src": "assets/img/quest/_ceria/budaya/q1/b.png",
+        "btn_c_src": "assets/img/quest/_ceria/budaya/q1/c.png",
     },
     {
-        "font_content_size": 20,
-        "question": "",
+        "question": "assets/img/quest/_ceria/budaya/q2/quest.png",
         "answer": "b",
         "decorations": [],
-        "btn_a_src": "assets/img/quest/ceria/budaya/q2/a.png",  # Anak sapi
-        "btn_b_src": "assets/img/quest/ceria/budaya/q2/b.png",  # Anak kambing
-        "btn_c_src": "assets/img/quest/ceria/budaya/q2/c.png",  # Anak ayam
+        "btn_a_src": "assets/img/quest/_ceria/budaya/q2/a.png",
+        "btn_b_src": "assets/img/quest/_ceria/budaya/q2/b.png",
+        "btn_c_src": "assets/img/quest/_ceria/budaya/q2/c.png",
     },
     {
-        "font_content_size": 18,
-        "question": "",
+        "question": "assets/img/quest/_ceria/budaya/q3/quest.png",
         "answer": "c",
         "decorations": [],
-        "btn_a_src": "assets/img/quest/ceria/budaya/q3/a.png",  # Ayam
-        "btn_b_src": "assets/img/quest/ceria/budaya/q3/b.png",  # Anak-anak
-        "btn_c_src": "assets/img/quest/ceria/budaya/q3/c.png",  # Suweng
+        "btn_a_src": "assets/img/quest/_ceria/budaya/q3/a.png",
+        "btn_b_src": "assets/img/quest/_ceria/budaya/q3/b.png",
+        "btn_c_src": "assets/img/quest/_ceria/budaya/q3/c.png",
     },
     {
-        "font_content_size": 20,
-        "question": "",
-        "answer": "c",
+        "question": "assets/img/quest/_ceria/budaya/q4/quest.png",
+        "answer": "a",
         "decorations": [],
-        "btn_a_src": "assets/img/quest/ceria/budaya/q4/a.png",  # Petak umpet
-        "btn_b_src": "assets/img/quest/ceria/budaya/q4/b.png",  # Lompat tali
-        "btn_c_src": "assets/img/quest/ceria/budaya/q4/c.png",  # Permainan tradisional
+        "btn_a_src": "assets/img/quest/_ceria/budaya/q4/a.png",
+        "btn_b_src": "assets/img/quest/_ceria/budaya/q4/b.png",
+        "btn_c_src": "assets/img/quest/_ceria/budaya/q4/c.png",
     },
     {
-        "font_content_size": 24,
-        "question": "",
+        "question": "assets/img/quest/_ceria/budaya/q5/quest.png",
         "answer": "b",
         "decorations": [],
-        "btn_a_src": "assets/img/quest/ceria/budaya/q5/a.png",  # Sumatera
-        "btn_b_src": "assets/img/quest/ceria/budaya/q5/b.png",  # Jakarta
-        "btn_c_src": "assets/img/quest/ceria/budaya/q5/c.png",  # Papua
+        "btn_a_src": "assets/img/quest/_ceria/budaya/q5/a.png",
+        "btn_b_src": "assets/img/quest/_ceria/budaya/q5/b.png",
+        "btn_c_src": "assets/img/quest/_ceria/budaya/q5/c.png",
     },
 ]
 
@@ -53,12 +48,11 @@ class BudayaCeriaScreen(LayoutScreen):
     def __init__(self, app, **kw):
         super().__init__(
             app=app,
-            color_wrong="red",
             questions_data=questions_data,
             home_destination="lagu_budaya",
             bar_timeout_src="assets/img/quest/bar_timeout/budaya.png",
             timeout_duration=10.0,
-            group_key_store="daerah",
+            group_key_store="budaya",
             key_store="ceria",
             **kw
         )
