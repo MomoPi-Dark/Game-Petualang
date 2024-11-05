@@ -97,8 +97,8 @@ class MainMenu(WithDefaultBG):
         self.button_mute = CustomButton(
             app=self.app,
             source=icon,
-            size_hint=(0.1, 0.05),
-            pos_hint={"center_x": 0.1, "center_y": 0.95},
+            size_hint=(0.15, 0.07),
+            pos_hint={"center_x": 0.12, "center_y": 0.95},
         )
         self.button_mute.bind(on_press=self._update_mute)
         self.add_widget(self.button_mute)
@@ -108,9 +108,9 @@ class MainMenu(WithDefaultBG):
 
         if is_muted:
             self.button_mute.source = "assets/img/icons/unmute.png"
-            self.app.backsound.play()
+            self.app.play_backsound()
             self.app.configs_manager.set("mute", False)
         else:
             self.button_mute.source = "assets/img/icons/mute.png"
-            self.app.backsound.stop()
+            self.app.stop_backsound(immediate=True)
             self.app.configs_manager.set("mute", True)

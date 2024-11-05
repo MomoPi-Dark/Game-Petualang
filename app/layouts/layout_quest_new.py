@@ -144,7 +144,7 @@ class LayoutQuest(FloatLayout):
         """Reset the quest and go to the home screen."""
         self.stop_quest()
 
-        if self.app.configs_manager.get("mute", False):
+        if not self.app.configs_manager.get("mute"):
             self.app.play_backsound()
 
     def _evaluate_answer(self, answer):
@@ -350,11 +350,6 @@ class LayoutFinish(FloatLayout):
             self.bg_sound.volume = 1
             self.bg_sound.play()
 
-        Window.bind(on_resize=self._on_resize)
-
-    def _on_resize(self, *args):
-        print(self.label_score.font_size, self.finish_box.size)
-
     def on_go_home(self):
         pass
 
@@ -484,7 +479,8 @@ class LayoutScreen(WithDefaultBG):
 
     def on_pre_leave(self, *args):
         """Stop the timer when the screen is about to be left."""
-        if self.app.configs_manager.get("mute", False):
+
+        if not self.app.configs_manager.get("mute"):
             self.app.play_backsound()
 
         if self._next_schedule:

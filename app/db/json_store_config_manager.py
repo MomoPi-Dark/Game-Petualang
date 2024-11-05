@@ -15,11 +15,18 @@ class ConfigManager:
         if isinstance(values, dict):
             self._store.put(key, **values)
         else:
-            self._store.put(key, value=values)
+            data = {
+                f"{key}_value": values,
+            }
+            self._store.put(key, **data)
 
-    def get(self, key, value_if_not_exists=None):
+    def get(self, key):
         if self.exists(key):
-            return self._store.get(key).get("value", value_if_not_exists)
+            data = self._store.get(key)
+            if f"{key}_value" in data:
+                return data[f"{key}_value"]
+            return data
+
         return None
 
     def get_all(self):
