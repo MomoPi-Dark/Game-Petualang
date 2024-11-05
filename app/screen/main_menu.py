@@ -88,8 +88,8 @@ class MainMenu(WithDefaultBG):
         self.add_widget(self.layout)
 
     def _init_mute(self, *args):
-        # Set the button image based on the saved mute state
         is_muted = self.app.configs_manager.get("mute") or False
+
         icon = (
             "assets/img/icons/mute.png" if is_muted else "assets/img/icons/unmute.png"
         )
