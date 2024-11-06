@@ -96,7 +96,7 @@ class LayoutQuest(FloatLayout):
         self.timeout_label = Label(
             text=f"{int(self.timeout_duration)} Detik",
             font_name="boorsok",
-            font_size="30sp",
+            font_size="32sp",
             pos_hint={"center_x": 0.78, "center_y": 0.95},
         )
         self.add_widget(self.timeout_label)

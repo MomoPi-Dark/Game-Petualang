@@ -18,6 +18,8 @@ from app.screen_level_kemerdekaan.ceria import KebangsaanCeriaScreen
 from app.screen_level_kemerdekaan.seru import KebangsaanSeruScreen
 from app.utils.calculate_window import CalculateWindow
 
+_version_ = "1.3"
+
 # NOTE: DEBUGGING
 Logger.setLevel("DEBUG")
 

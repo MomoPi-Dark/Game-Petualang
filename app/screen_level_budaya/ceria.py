@@ -11,7 +11,7 @@ questions_data = [
     },
     {
         "question": "assets/img/quest/_ceria/budaya/q2/quest.png",
-        "answer": "b",
+        "answer": "c",
         "decorations": [],
         "btn_a_src": "assets/img/quest/_ceria/budaya/q2/a.png",
         "btn_b_src": "assets/img/quest/_ceria/budaya/q2/b.png",
