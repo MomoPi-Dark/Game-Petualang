@@ -1,4 +1,3 @@
-from kivy.uix.image import Image
 from kivymd.uix.floatlayout import MDFloatLayout
 
 from app.customs.uix import CustomButton
