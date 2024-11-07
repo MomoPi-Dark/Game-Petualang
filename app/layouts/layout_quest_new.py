@@ -1,3 +1,5 @@
+import random
+
 from kivy.clock import Clock
 from kivy.core.audio import Sound, SoundLoader
 from kivy.core.window import Window
@@ -385,8 +387,10 @@ class LayoutScreen(WithDefaultBG):
         self.add_widget(self.base_layout)
 
         self.current_question_index = 0
-        self.current_question = None
+
         self.questions_cache = []
+
+        self.current_question = None
         self.start_time = None
         self._next_schedule = None
         self.finish = None
@@ -398,9 +402,13 @@ class LayoutScreen(WithDefaultBG):
     def _reset_cache(self):
         """Reset quiz-related data for a fresh start."""
         self.current_question_index = 0
-        self.current_question = None
+
         self.questions_cache = []
+
+        self.current_question = None
         self.start_time = None
+        self._next_schedule = None
+        self.finish = None
 
     def is_quiz_complete(self):
         """Check if all questions have been answered."""
@@ -474,6 +482,11 @@ class LayoutScreen(WithDefaultBG):
 
         self.app.stop_backsound()
         self.current_question_index = 0
+
+        self._questions_data = random.sample(
+            self._questions_data, len(self._questions_data)
+        )
+
         self._show_question()
         return super().on_pre_enter(*args)
 
