@@ -3,16 +3,16 @@ import random
 from kivy.clock import Clock
 from kivy.core.audio import Sound, SoundLoader
 from kivy.core.window import Window
-from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.image import Image
 from kivy.uix.label import Label
+from kivymd.uix.floatlayout import MDFloatLayout
 
 from app.customs.image import CustomImage
 from app.customs.uix import CustomButton, OutlinedLabel
 from app.layouts.default_bg import WithDefaultBG
 
 
-class LayoutQuest(FloatLayout):
+class LayoutQuest(MDFloatLayout):
     __events__ = ("on_complete", "on_timeout", "on_go_home")
 
     def __init__(
@@ -239,7 +239,7 @@ class LayoutQuest(FloatLayout):
         pass
 
 
-class LayoutFinish(FloatLayout):
+class LayoutFinish(MDFloatLayout):
     __events__ = ("on_go_home", "on_restart_quest")
 
     def __init__(self, app, group_key_store, key_store, destination, **kwargs):
@@ -383,7 +383,7 @@ class LayoutScreen(WithDefaultBG):
 
         self.bg_image_path = "assets/img/bg.png"
 
-        self.base_layout = FloatLayout()
+        self.base_layout = MDFloatLayout()
         self.add_widget(self.base_layout)
 
         self.current_question_index = 0
