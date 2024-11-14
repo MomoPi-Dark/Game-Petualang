@@ -18,7 +18,7 @@ from app.screen_level_kemerdekaan.ceria import KebangsaanCeriaScreen
 from app.screen_level_kemerdekaan.seru import KebangsaanSeruScreen
 from app.utils.calculate_window import CalculateWindow
 
-_version_ = "1.1"
+_version_ = "1.3.2"
 
 # NOTE: DEBUGGING
 Logger.setLevel("DEBUG")
@@ -30,7 +30,7 @@ Logger.setLevel("DEBUG")
 
 # NOTE: PROD SCREEN
 Window.size = CalculateWindow(
-    window_width=Window.width,  
+    window_width=Window.width,
 ).get_size()
 
 # NOTE: INIT FONTS

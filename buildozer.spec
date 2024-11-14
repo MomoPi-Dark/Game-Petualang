@@ -459,3 +459,10 @@ git.timeout = 600
 #    Then, invoke the command line with the "demo" profile:
 #
 #buildozer --profile demo android debug
+
+android.release = True
+android.keystore = ~/keystores/nada_cilik_key.keystore
+android.keyalias = nada_cilik_key
+
+android.keystorepassword =nada_cilik_123
+android.keypassword = nada_cilik_123
