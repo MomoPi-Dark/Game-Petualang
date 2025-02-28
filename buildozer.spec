@@ -461,8 +461,8 @@ git.timeout = 600
 #buildozer --profile demo android debug
 
 android.release = True
-android.keystore = ~/keystores/nada_cilik_key.keystore
+android.keystore = ~/keystores/nadacilik_key.keystore
 android.keyalias = nada_cilik_key
 
-android.keystorepassword =nada_cilik_123
-android.keypassword = nada_cilik_123
+android.keystorepassword =NadaCilik125
+android.keypassword = NadaCilik125

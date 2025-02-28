@@ -25,13 +25,13 @@ Logger.setLevel("DEBUG")
 
 # NOTE: DEV SCREEN
 # Window.size = CalculateWindow(Window.width, (9, 20)).get_size()
-# Window.size = CalculateWindow(380, (9, 20)).get_size()
+Window.size = CalculateWindow(380, (9, 16)).get_size()
 # Window.size = CalculateWindow(480, (9, 20)).get_size()
 
 # NOTE: PROD SCREEN
-Window.size = CalculateWindow(
-    window_width=Window.width,
-).get_size()
+# Window.size = CalculateWindow(
+#     window_width=Window.width,
+# ).get_size()
 
 # NOTE: INIT FONTS
 LabelBase.register(name="lazy_dog", fn_regular="assets/font/lazy_dog.ttf")
