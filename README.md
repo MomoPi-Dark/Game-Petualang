@@ -1,4 +1,4 @@
-**# 🎮 Game Petualang**  
+## 🎮 Game Petualang
 Game interaktif berbasis tebak lagu dan lirik yang menantang dengan sistem waktu mundur. Pemain harus menjawab dengan cepat sebelum waktu habis!  
 
 ## 🎧 Fitur Utama  
